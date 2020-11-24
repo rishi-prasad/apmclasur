@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कृषि उत्पन्न बाजार समिती, लासूर</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        table, th, tr {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>पावती क्रमांक</th>
+            <th>शेतकर्‍याचे नाव</th>
+            <th>फॉर्म दाखल केल्याची तारीख</th>
+            <th>आधार कार्ड प्रत</th>
+            <th>पासबुक प्रत</th>
+            <th>7/12 प्रत</th>
+            <th>माहिती</th>
+        </tr>
+        <% for (let sorts of sorted) { %>
+            <tr>
+                <th> <%= sorts.receiptNo %> </th>
+                <th> <%= sorts.farmerName %> </th>
+                <th> <%= sorts.dateOfFormSubmitted %>  </th>
+                <th> <a href="../public/uploads/<%= sorts.aadhar %>"> Aadhar copy </a> </th>
+                <th> <a href="../public/uploads/<%= sorts.passbook %>"> Passbook copy </a> </th>
+                <th> <a href="../public/uploads/<%= sorts.landDoc %>"> 7/12 copy </a> </th>
+                <th> <a href="../pdfOutput/<%=  sorts.outputFile  %>"> View full information </a> </th>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

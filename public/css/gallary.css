@@ -1,0 +1,32 @@
+#gallary {
+    text-align: center;
+}
+
+#img-container1,
+#img-container2,
+#img-container3,
+#img-container4,
+#img-container5 {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+#img-container1 #item-1,
+#img-container2 #item-2,
+#img-container3 #item-3,
+#img-container4 #item-4,
+#img-container5 #item-5 {
+    width: 60%;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    #img-container1 #item-1,
+#img-container2 #item-2,
+#img-container3 #item-3,
+#img-container4 #item-4,
+#img-container5 #item-5 {
+    width: 95%;
+    height: auto;
+}
+}

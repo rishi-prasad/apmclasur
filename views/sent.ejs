@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कृषि उत्पन्न बाजार समिती, लासूर</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        li {
+            list-style: none;
+        }
+
+        #clear-fix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        /* nav Styles */
+
+        header .logo {
+    text-align: center;
+    color: brown;
+    padding: 20px 0;
+    margin: 20px 20%;
+    font-weight: 700;
+    float: right;
+    font-size: 2rem;
+}
+
+#down {
+    display: block;
+    font-size: 1.5rem;
+}
+
+#logo {
+    width: 80px;
+    height: 80px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#prev-icon, #next-icon {
+    color: brown;
+}
+
+nav {
+    background-color: brown;
+    text-align: center;
+}
+
+#bold {
+    color: #fff;
+    font-weight: 700;
+    margin: 0 50px;
+    transition: 200ms;
+}
+
+#bold:hover {
+    background-color: greenyellow
+}
+
+#center {
+    text-align: center;
+}
+
+#bg {
+    background-color: #3a8a36;
+}
+
+@media (max-width: 1200px) {
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    header .logo {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    header {
+        text-align: center;
+    }
+    
+    #logo {
+        float: initial;
+        margin-left: initial;
+    }
+
+    header .logo {
+        float: initial;
+    }
+}
+
+.bg-secondary {
+    background-color: black;
+}
+        /* section styling */
+        
+        .section {
+            width: 100%;
+            height: 50vh;
+        }
+
+        #sent {
+            font-size: 24px;
+
+        }
+
+        /* footer */
+
+        footer#footer {
+            margin-top: 50px;
+            background: #333;
+            color: #fff;
+            margin-bottom: 0;
+            padding-bottom: 35px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #footer {
+            padding: 50px 0 0;    
+        }
+
+        #contact-title {
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #contact {
+            display: block;
+            margin: 10px auto 40px;
+            max-width: 650px;
+            font-weight: 700;
+        }
+
+        #contact ul li {
+            padding: 10px 0;
+        }
+
+        #copyright {
+            width: 100%;
+            padding: 20px 0 0;
+        }
+
+        #copyright-info, #developer {
+            display: inline-block;
+        }
+
+        #copyright-info {
+            float: left;
+            color: grey;
+        }
+
+        #developer {
+            float: right;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        #i1, #i2, #i3 {
+            color: darkslategray;
+        }
+
+        @media (max-width: 900) {
+            footer {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <img src="images/logo.jpg" alt="logo" id="logo">
+        <h1 class="logo">कृषि उत्पन्न बाजार समिती, लासूर स्टेशन, <span id="down"> ता. गंगापूर, जि. औरंगाबाद- 423702</span></h1>
+        <div id="clear-fix"></div>
+    </header>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light" id="bg">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="center">
+                <li class="nav-item active">
+                    <a class="nav-link" id="bold" href="/">मुख्यपृष्ठ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="/about">आमच्याबद्दल</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="/facilities">आमच्या सुविधा</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown white bold" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 700;">
+                        शेतीमाल
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">तूर</a>
+                        <a class="dropdown-item" href="#">गहू</a>
+                        <a class="dropdown-item" href="#">ज्वारी</a>
+                        <a class="dropdown-item" href="#">बाजरी</a>
+                        <a class="dropdown-item" href="#">जवस</a>
+                        <a class="dropdown-item" href="#">मूग</a>
+                        <a class="dropdown-item" href="#">उडीद</a>
+                        <a class="dropdown-item" href="#">हरभरा</a>
+                        <a class="dropdown-item" href="#">सोयाबीन</a>
+                        <a class="dropdown-item" href="#">कापूस</a>
+                        <a class="dropdown-item" href="#">सूर्यफूल</a>
+                        <a class="dropdown-item" href="#">तीळ</a>
+                        <a class="dropdown-item" href="#">तांदूळ</a>
+                        <a class="dropdown-item" href="#">मक्का</a>
+                        <a class="dropdown-item" href="#">चावली</a>
+                        <a class="dropdown-item" href="#">भुईमुंग</a>
+                        <a class="dropdown-item" href="#">लासुन</a>
+                        <a class="dropdown-item" href="#">कांदा</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="#">फोटो प्रदर्शन</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="/contact">संपर्क</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+
+<br>
+<br>
+
+    <div class="container">
+        <div class="section">
+            <p id="sent">फॉर्म यशस्वीरित्या सबमिट केले. <a href="/pdf">पोच पावती साठी येथे क्लिक करा</a> </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div class="container">
+            <h5 id="contact-title">संपर्क</h5>
+            <div id="contact" class="mx-auto">
+                <ul>
+                    <li><i class="fa fa-map-marker" id="i1" aria-hidden="true"></i> &nbsp; पत्ता: कृषि उत्पन्न बाजार समिती, लासूर स्टेशन, ता. गंगापूर, जि. औरंगाबाद - 423702</li>
+                    <li><i class="fa fa-phone" id="i2" aria-hidden="true"></i> &nbsp; फोन: 02433-241355, 02433-241855</li>
+                    <li><i class="fa fa-envelope" id="i3" aria-hidden="true"></i> &nbsp; ई-मेल: am_lasurstation@msamb.com</li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p id="developer">Designed an developed by <a href="#" id="dev-name">BS Technologies</a></p>
+                <p id="copyright-info">Copyright &copy; 2020 कृषि उत्पन्न बाजार समिती, लासूर</p>
+                <div id="clear-fix"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

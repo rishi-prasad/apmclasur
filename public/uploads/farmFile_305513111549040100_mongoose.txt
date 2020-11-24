@@ -1,0 +1,22 @@
+Nameserver
+ns71.domaincontrol.com
+ns72.domaincontrol.com
+
+cPanel
+
+ip: 148.66.136.58
+
+port: 22
+
+username: rw6wavz2oo43
+
+pass: Rishiprasad@1
+
+zoom meeting id: 84108123701
+meeting password: 876177
+email: bsprintronics@yahoo.com
+
+
+FTP Username: rishikesh@lasurapmc.org.in
+FTP server: ftp.lasurapmc.org.in
+FTP & explicit FTPS port:  21

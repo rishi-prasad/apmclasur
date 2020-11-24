@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कृषि उत्पन्न बाजार समिती, लासूर</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        table, th, tr {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 5px;
+        }
+
+        #sorted-from, #sorted-to {
+            display: inline-block;
+            width: 100px;
+        }
+
+        #form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1em 20px;
+        }
+
+        #btn {
+            display: inline-block;
+            margin-left: 20px;
+            padding: 5px 10px;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <form action="/all_farmers_list/sorted_list" method="post">
+            <div class="form-group">
+                <label for="sorted-from">यादी</label>
+                <input type="number" class="form-control" id="sorted-from" name="from">
+                <label for="sorted-to">ते</label>
+                <input type="number" class="form-control" id="sorted-to" name="to">
+                <button type="submit" class="btn btn-primary" id="btn">पहा</button>
+            </div>
+        </form>
+    </div>
+    <table>
+        <tr>
+            <th>पावती क्रमांक</th>
+            <th>शेतकर्‍याचे नाव</th>
+            <th>फॉर्म दाखल केल्याची तारीख</th>
+            <th>आधार कार्ड प्रत</th>
+            <th>पासबुक प्रत</th>
+            <th>7/12 प्रत</th>
+            <th>माहिती</th>
+        </tr>
+        <% for (let farmer of farmers) { %>
+            <tr>
+                <th> <%= farmer.receiptNo %> </th>
+                <th> <%= farmer.farmerName %> </th>
+                <th> <%= farmer.dateOfFormSubmitted %>  </th>
+                <th> <a href="../public/uploads/<%= farmer.aadhar %>"> Aadhar copy </a> </th>
+                <th> <a href="../public/uploads/<%= farmer.passbook %>"> Passbook copy </a> </th>
+                <th> <a href="../public/uploads/<%= farmer.landDoc %>"> 7/12 copy </a> </th>
+                <th> <a href="../pdfOutput/<%=  farmer.outputFile  %>"> View full information </a> </th>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

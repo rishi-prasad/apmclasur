@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कृषि उत्पन्न बाजार समिती, लासूर</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .size {
+            margin: 25px 0;
+        }
+
+        .error-msg {
+            color: red;
+            text-align: center;
+        }
+
+        .note {
+            text-align: center;
+            margin: 10px 0;
+            margin-bottom: 10px;
+        }
+
+        .only-marathi {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <img src="images/logo.jpg" alt="logo" id="logo">
+        <h1 class="logo">कृषि उत्पन्न बाजार समिती, लासूर स्टेशन, <span id="down"> ता. गंगापूर, जि. औरंगाबाद- 423702</span></h1>
+        <div id="clear-fix"></div>
+    </header>
+    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-success">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" id="center">
+                <li class="nav-item active">
+                    <a class="nav-link" id="bold" href="/">मुख्यपृष्ठ <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="/about">आमच्याबद्दल</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="#">आमच्या सुविधा</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown white bold" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-weight: 700;">
+                        शेतीमाल
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">तूर</a>
+                        <a class="dropdown-item" href="#">गहू</a>
+                        <a class="dropdown-item" href="#">ज्वारी</a>
+                        <a class="dropdown-item" href="#">बाजरी</a>
+                        <a class="dropdown-item" href="#">जवस</a>
+                        <a class="dropdown-item" href="#">मूग</a>
+                        <a class="dropdown-item" href="#">उडीद</a>
+                        <a class="dropdown-item" href="#">हरभरा</a>
+                        <a class="dropdown-item" href="#">सोयाबीन</a>
+                        <a class="dropdown-item" href="#">कापूस</a>
+                        <a class="dropdown-item" href="#">सूर्यफूल</a>
+                        <a class="dropdown-item" href="#">तीळ</a>
+                        <a class="dropdown-item" href="#">तांदूळ</a>
+                        <a class="dropdown-item" href="#">मक्का</a>
+                        <a class="dropdown-item" href="#">चवली</a>
+                        <a class="dropdown-item" href="#">भुईमुंग</a>
+                        <a class="dropdown-item" href="#">लासुन</a>
+                        <a class="dropdown-item" href="#">कांदा</a>
+                </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="#">फोटो प्रदर्शन</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="bold" href="/contact">संपर्क</a>
+                </li>
+            </ul>
+        </div>
+        </nav>
+    </div>
+
+<br>
+<br>
+
+    <h2 id="form-title" style="text-align: center;">शेतीमाल: कापूस शेतकरी नाव नोंदणी</h2>
+<br>
+    
+    <% if (locals.err != null) { %> 
+        <p class="error-msg"><%= err %></p> 
+    <% } %>
+
+    <h5 class="note"><span class="only-marathi">*</span> केले त्या ठिकाणी फक्त मराठीत माहिती भरा</h5>
+
+    <!-- FORM ==================================== -->
+
+    <div class="container">
+        <div id="form">
+            <form action="/registration" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                  <label for="name">शेतकर्‍याचे नाव <span class="only-marathi">*</span>: </label>
+                  <input type="text" class="form-control" id="name" name="name" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">आधार कार्ड क्रमांक: </label>
+                    <input type="text" class="form-control" name="aadharNumber" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" autocapitalize="true" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">फोन.नं / मो.नं: </label>
+                    <input type="text" class="form-control" name="phoneNumber" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">गाव <span class="only-marathi">*</span>: </label>
+                    <input type="text" class="form-control" name="village" id="village" style="display:inline-block; width: 200px;margin-right: 20px" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">तालुका <span class="only-marathi">*</span>: </label>
+                    <input type="text" class="form-control" name="taluka" id="taluka" style="display:inline-block; width: 200px;margin-right: 20px" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">जिल्हा <span class="only-marathi">*</span>: </label>
+                    <input type="text" class="form-control" name="district" id="district" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">जातीचे प्रवर्ग: </label>
+                    <input type="text" class="form-control" name="castClass" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" required> &nbsp; &nbsp; (SC/ST/OBC/OPEN)
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">बँकेचे नाव: </label>
+                    <input type="text" class="form-control" name="bankName" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">बँकेचे खाते क्रमांक: </label>
+                    <input type="text" class="form-control" name="bankAc" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" autocapitalize="characters" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">शाखा <span class="only-marathi">*</span>: </label>
+                    <input type="text" class="form-control" name="bankBranch" id="bankBranch" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">बँकेचे IFSC कोड क्रमांक: </label>
+                    <input type="text" class="form-control" name="bankIFSC" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" autocapitalize="characters" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">7/12 गट क्रमांक: </label>
+                    <input type="text" class="form-control" name="gutNumber" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">कापूस लागवडी खालील क्षेत्र(एकर)/Area(acres): </label>
+                    <input type="text" class="form-control" name="area" id="exampleInputPassword1" style="display:inline-block; width: 200px;" autocomplete="off" required>
+                </div>
+
+                <h3 id="form-title-new">File attachments</h3>
+
+                <p class="size">(खाली दिलेली कागदपत्राची साईज प्रत्येकी 1mb पेक्षा कमी असावी)</p>
+
+                <div class="form-group">
+                    <label for="file">आधार कार्ड copy: </label>
+                    <input type="file" class="form-control" name="aadharFile" style="display:inline-block; width: 300px;" autocomplete="off" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">शेतीचा 7/12: </label>
+                    <input type="file" class="form-control" name="farmFile" id="exampleInputPassword1" style="display:inline-block; width: 300px;" autocomplete="off" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPassword1">बँक पासबुक प्रत </label>
+                    <input type="file" class="form-control" name="passbook" id="exampleInputPassword1" style="display:inline-block; width: 300px;" autocomplete="off" required>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+                    <label class="form-check-label" for="exampleCheck1">होय/Yes मी कापुस नोंदणी करीता अर्जामध्ये भरलेली माहिती अचुक व बरोबर आहे./Above all information is true and valid.</label>
+                </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- Footer -->
+
+    <footer id="footer">
+        <div class="container">
+            <h5 id="contact-title">संपर्क</h5>
+            <div id="contact" class="mx-auto">
+                <ul>
+                    <li><i class="fa fa-map-marker" id="i1" aria-hidden="true"></i> &nbsp; पत्ता: कृषि उत्पन्न बाजार समिती, लासूर स्टेशन, ता. गंगापूर, जि. औरंगाबाद - 423702</li>
+                    <li><i class="fa fa-phone" id="i2" aria-hidden="true"></i> &nbsp; फोन: 02433-241355, 02433-241855</li>
+                    <li><i class="fa fa-envelope" id="i3" aria-hidden="true"></i> &nbsp; ई-मेल: am_lasurstation@msamb.com</li>
+                </ul>
+            </div>
+            <div id="copyright">
+                <p id="copyright-info">Copyright &copy; 2020 कृषि उत्पन्न बाजार समिती, लासूर</p>
+                <p id="developer">Designed an developed by <a href="#" id="dev-name">BS Technologies</a></p>
+                <div id="clear-fix"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
