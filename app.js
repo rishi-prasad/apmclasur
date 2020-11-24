@@ -8,15 +8,15 @@ const mongoose = require('mongoose');
 
 // mongodb+srv://user:rishiprasad@123@cluster0.749kx.mongodb.net/allFarmers?retryWrites=true&w=majority {  }
 // Setting up mongodb connection   mongodb+srv://rishiprasad:rishiprasad@123@cluster0.vhyhx.mongodb.net/<dbname>?retryWrites=true&w=majority
-mongoose.connect('mongodb://localhost/newFarmers', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+// mongoose.connect('mongodb://localhost/newFarmers', {
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
 
-const db = mongoose.connection;
+// const db = mongoose.connection;
 
-db.on('error', error => console.log(error));
-db.once('open', () => console.log('Connected to mongodb'));
+// db.on('error', error => console.log(error));
+// db.once('open', () => console.log('Connected to mongodb'));
 
 
 const Farmers = require('./farmer');
